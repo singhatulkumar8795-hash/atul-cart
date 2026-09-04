@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Atul Cart is your trusted online shopping store for electronics, fashion, grocery, beauty and everyday essentials at great prices." />
+    <meta name="keywords" content="Atul Cart, online shopping, electronics, fashion, grocery, best deals India" />
+    <meta name="author" content="Atul Cart" />
+    <meta name="theme-color" content="#2455d6" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Atul Cart | Shop smart, live better" />
+    <meta property="og:description" content="Discover fresh finds, great prices and everyday essentials at Atul Cart." />
+    <meta property="og:site_name" content="Atul Cart" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="manifest" href="site.webmanifest" />
+    <title>Atul Cart | Shop smart, live better</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="top-strip">
+      <div class="container top-strip-inner">
+        <span>Welcome to Atul Cart</span>
+        <div class="top-links">
+          <a href="#orders">Track Order</a>
+          <a href="#help">Help Centre</a>
+          <button class="language-btn" type="button">EN <span>⌄</span></button>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container header-main">
+        <a class="brand" href="#" aria-label="Atul Cart home">
+          <span class="brand-mark">A</span>
+          <span><strong>atul</strong><em>cart</em><small>shop smart, live better</small></span>
+        </a>
+        <form class="search-box" id="search-form">
+          <span class="search-icon">⌕</span>
+          <input id="search-input" type="search" placeholder="Search for products, brands and more" aria-label="Search products" />
+          <button type="submit">Search</button>
+        </form>
+        <nav class="header-actions" aria-label="Account actions">
+          <button class="account-btn" type="button" id="account-btn"><span class="action-icon">♙</span><span id="account-label">Login</span></button>
+          <button class="header-link orders-btn" type="button" id="orders-btn"><span class="action-icon">▱</span><span>Orders</span></button>
+          <button class="cart-btn" id="cart-btn" type="button"><span class="action-icon">🛒</span><span>Cart</span><b id="cart-count">0</b></button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="category-bar">
+        <div class="container categories">
+          <button class="category-item active" data-category="All"><span class="category-icon">✦</span>All</button>
+          <button class="category-item" data-category="Grocery"><span class="category-icon">🥕</span>Grocery</button>
+          <button class="category-item" data-category="Mobiles"><span class="category-icon">📱</span>Mobiles</button>
+          <button class="category-item" data-category="Fashion"><span class="category-icon">👟</span>Fashion</button>
+          <button class="category-item" data-category="Electronics"><span class="category-icon">💻</span>Electronics</button>
+          <button class="category-item" data-category="Home"><span class="category-icon">🛋️</span>Home & Furniture</button>
+          <button class="category-item" data-category="Appliances"><span class="category-icon">🔌</span>Appliances</button>
+          <button class="category-item" data-category="Beauty"><span class="category-icon">💄</span>Beauty</button>
+          <button class="category-item" data-category="Toys"><span class="category-icon">🧸</span>Toys & More</button>
+          <button class="category-item" data-category="Travel"><span class="category-icon">✈️</span>Travel</button>
+        </div>
+      </section>
+
+      <section class="hero-section container">
+        <div class="hero-content">
+          <div class="hero-copy">
+            <p class="eyebrow">The Atul Cart big sale</p>
+            <h1>Everything you want.<br /><span>Delivered with a smile.</span></h1>
+            <p class="hero-text">Fresh finds, unbeatable prices and everyday essentials — all in one place.</p>
+            <button class="primary-btn" id="shop-now">Shop now <span>→</span></button>
+            <div class="hero-benefits">
+              <span>✓ Free delivery above ₹499</span>
+              <span>✓ 7-day easy returns</span>
+            </div>
+          </div>
+          <div class="hero-art" aria-label="Shopping sale illustration">
+            <div class="sun"></div>
+            <div class="float-card card-one">★ <strong>4.8</strong><small>happy shoppers</small></div>
+            <div class="float-card card-two">⚡ <strong>Up to 70% off</strong><small>on top picks</small></div>
+            <div class="shopping-bag"><span>atul<br /><i>cart</i></span></div>
+            <div class="product-orb orb-one">⌚</div>
+            <div class="product-orb orb-two">🎧</div>
+            <div class="product-orb orb-three">👟</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container feature-row">
+        <div class="feature"><span class="feature-icon mint">🚚</span><div><strong>Fast & free delivery</strong><small>On orders above ₹499</small></div></div>
+        <div class="feature"><span class="feature-icon peach">↩</span><div><strong>Easy returns</strong><small>7-day hassle-free returns</small></div></div>
+        <div class="feature"><span class="feature-icon lavender">♙</span><div><strong>Secure payments</strong><small>100% safe & secure</small></div></div>
+        <div class="feature"><span class="feature-icon yellow">☎</span><div><strong>Need help?</strong><small>We're here 24/7</small></div></div>
+      </section>
+
+      <section class="container deals-section" id="products">
+        <div class="section-heading">
+          <div><p class="eyebrow">Handpicked for you</p><h2>Top deals today</h2></div>
+          <button class="view-all" id="view-all">View all <span>→</span></button>
+        </div>
+        <div class="product-grid" id="product-grid"></div>
+        <div class="empty-state" id="empty-state" hidden>No products found. Try another search.</div>
+      </section>
+
+      <section class="container promo-grid">
+        <div class="promo-card promo-yellow"><div><p>Fresh picks daily</p><h3>Groceries<br />at great prices</h3><button data-category="Grocery">Shop groceries →</button></div><span class="promo-emoji">🥬</span></div>
+        <div class="promo-card promo-blue"><div><p>Upgrade your tech</p><h3>Power up<br />your lifestyle</h3><button data-category="Electronics">Explore tech →</button></div><span class="promo-emoji">🎧</span></div>
+        <div class="promo-card promo-pink"><div><p>Style that speaks</p><h3>Looks you'll<br />love</h3><button data-category="Fashion">Shop fashion →</button></div><span class="promo-emoji">👗</span></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div><a class="brand footer-brand" href="#"><span class="brand-mark">A</span><span><strong>atul</strong><em>cart</em><small>shop smart, live better</small></span></a><p>Making everyday shopping<br />a little more delightful.</p></div>
+        <div><h4>Company</h4><a href="#about">About us</a><a href="#careers">Careers</a><a href="#stories">Our stories</a></div>
+        <div><h4>Customer care</h4><a href="#help">Help centre</a><a href="#returns">Returns & refunds</a><a href="#terms">Terms & conditions</a><button class="admin-link" id="admin-btn" type="button">Admin dashboard</button></div>
+        <div><h4>Download our app</h4><div class="app-buttons"><button>▶ <span>Get it on<strong>Google Play</strong></span></button><button> <span>Download on the<strong>App Store</strong></span></button></div></div>
+      </div>
+      <div class="container footer-bottom"><span>© 2024 Atul Cart. Made with care in India.</span><span>Follow us&nbsp; &nbsp;● ◉ ◎</span></div>
+    </footer>
+
+    <div class="toast" id="toast" role="status"></div>
+    <div class="modal-shell" id="auth-modal" aria-hidden="true">
+      <section class="modal-card auth-card">
+        <button class="modal-close" data-close-modal="auth-modal">×</button>
+        <div class="modal-brand"><span class="brand-mark">A</span><strong>Welcome to Atul Cart</strong></div>
+        <p class="modal-subtitle">Login to unlock faster checkout and track your orders.</p>
+        <div class="auth-tabs"><button class="auth-tab active" data-auth-tab="login">Login</button><button class="auth-tab" data-auth-tab="signup">Create account</button></div>
+        <form id="auth-form">
+          <label>Name<input id="auth-name" type="text" placeholder="Your name" /></label>
+          <label>Email<input id="auth-email" type="email" placeholder="you@example.com" required /></label>
+          <label>Password<input id="auth-password" type="password" placeholder="Minimum 6 characters" minlength="6" required /></label>
+          <button class="primary-btn full-btn" type="submit" id="auth-submit">Login securely <span>→</span></button>
+        </form>
+        <p class="demo-note">Demo mode: your account is saved only in this browser.</p>
+      </section>
+    </div>
+    <div class="modal-shell" id="product-modal" aria-hidden="true"><section class="modal-card product-detail-card"><button class="modal-close" data-close-modal="product-modal">×</button><div id="product-detail"></div></section></div>
+    <div class="modal-shell" id="checkout-modal" aria-hidden="true">
+      <section class="modal-card checkout-card">
+        <button class="modal-close" data-close-modal="checkout-modal">×</button>
+        <p class="eyebrow">Secure checkout</p><h2>Where should we deliver?</h2>
+        <form id="checkout-form" class="checkout-form">
+          <div class="form-row"><label>Full name<input name="name" required placeholder="Atul Kumar" /></label><label>Phone number<input name="phone" required pattern="[0-9]{10}" placeholder="10 digit number" /></label></div>
+          <label>Address<input name="address" required placeholder="House no, street, area" /></label>
+          <div class="form-row"><label>City<input name="city" required placeholder="Your city" /></label><label>PIN code<input name="pin" required pattern="[0-9]{6}" placeholder="6 digit PIN" /></label></div>
+          <fieldset><legend>Payment method</legend><label class="radio-option"><input type="radio" name="payment" value="cod" checked /> Cash on delivery</label><label class="radio-option"><input type="radio" name="payment" value="upi" /> UPI / card (demo)</label></fieldset>
+          <div class="checkout-summary"><span>Total payable</span><strong id="checkout-total">₹0</strong></div>
+          <button class="primary-btn full-btn" type="submit">Place order <span>→</span></button>
+        </form>
+      </section>
+    </div>
+    <div class="modal-shell" id="orders-modal" aria-hidden="true"><section class="modal-card orders-card"><button class="modal-close" data-close-modal="orders-modal">×</button><p class="eyebrow">Your account</p><h2>Your orders</h2><div id="orders-list"></div></section></div>
+    <div class="modal-shell" id="admin-modal" aria-hidden="true"><section class="modal-card admin-card"><button class="modal-close" data-close-modal="admin-modal">×</button><p class="eyebrow">Atul Cart control room</p><h2>Admin dashboard</h2><div class="admin-stats" id="admin-stats"></div><div class="admin-table" id="admin-table"></div></section></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart">
+      <div class="drawer-header"><h2>Your cart <span id="drawer-count">0</span></h2><button id="close-cart" aria-label="Close cart">×</button></div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-footer"><div><span>Subtotal</span><strong id="cart-total">₹0</strong></div><button class="primary-btn checkout-btn" id="checkout-btn">Proceed to checkout <span>→</span></button></div>
+    </aside>
+    <div class="overlay" id="overlay"></div>
+    <script src="script.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "OnlineStore",
+        "name": "Atul Cart",
+        "description": "Online shopping for electronics, fashion, grocery, beauty and everyday essentials.",
+        "url": "./",
+        "areaServed": "IN",
+        "currenciesAccepted": "INR",
+        "sameAs": []
+      }
+    </script>
+  </body>
+</html>

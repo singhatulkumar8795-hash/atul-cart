@@ -1,0 +1,10 @@
+{
+  "name": "Atul Cart",
+  "short_name": "Atul Cart",
+  "description": "Shop smart, live better.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2455d6",
+  "icons": []
+}

@@ -134,14 +134,12 @@
         <button class="modal-close" data-close-modal="auth-modal">×</button>
         <div class="modal-brand"><span class="brand-mark">A</span><strong>Welcome to Atul Cart</strong></div>
         <p class="modal-subtitle">Login to unlock faster checkout and track your orders.</p>
-        <div class="auth-tabs"><button class="auth-tab active" data-auth-tab="login">Login</button><button class="auth-tab" data-auth-tab="signup">Create account</button></div>
+        <div class="auth-tabs"><button class="auth-tab active">Mobile OTP Login</button></div>
         <form id="auth-form">
-          <label>Name<input id="auth-name" type="text" placeholder="Your name" /></label>
-          <label>Email<input id="auth-email" type="email" placeholder="you@example.com" required /></label>
-          <label>Password<input id="auth-password" type="password" placeholder="Minimum 6 characters" minlength="6" required /></label>
-          <button class="primary-btn full-btn" type="submit" id="auth-submit">Login securely <span>→</span></button>
+          <label>Email address<input id="auth-email" type="email" placeholder="you@example.com" required /></label>
+          <button class="primary-btn full-btn" type="submit" id="auth-submit">Send login link <span>→</span></button>
         </form>
-        <p class="demo-note">Demo mode: your account is saved only in this browser.</p>
+        <p class="demo-note" id="auth-note">A secure login link will arrive in your email.</p>
       </section>
     </div>
     <div class="modal-shell" id="product-modal" aria-hidden="true"><section class="modal-card product-detail-card"><button class="modal-close" data-close-modal="product-modal">×</button><div id="product-detail"></div></section></div>

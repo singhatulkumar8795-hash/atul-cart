@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="top-strip">
+    <div class="top-strip"><div class="announcement-marquee">🔥 Big Savings Week is Live&nbsp; | &nbsp;Free Delivery on Orders Above ₹499&nbsp; | &nbsp;COD available across supported PIN codes</div>
       <div class="container top-strip-inner">
         <span>Welcome to Atul Cart</span>
         <div class="top-links">
@@ -47,13 +47,13 @@
           <button class="delivery-btn" id="delivery-btn" type="button"><span class="action-icon">⌖</span><span><small>Deliver to</small><strong id="delivery-label">Select location</strong></span></button>
           <button class="account-btn" type="button" id="account-btn"><span class="action-icon">♙</span><span id="account-label">Login</span></button>
           <button class="header-link orders-btn" type="button" id="orders-btn"><span class="action-icon">▱</span><span>Orders</span></button>
-          <button class="cart-btn" id="cart-btn" type="button"><span class="action-icon">🛒</span><span>Cart</span><b id="cart-count">0</b></button>
+          <button class="cart-btn" id="cart-btn" type="button"><span class="action-icon">🛒</span><span>Cart</span><b id="cart-count">0</b></button><button class="theme-toggle header-theme" id="theme-toggle" type="button" aria-label="Toggle dark mode">☾</button>
         </nav>
       </div>
     </header>
 
-    <main>
-      <section class="category-bar">
+    <main id="main-content">
+      <section class="category-bar" aria-label="Product categories">
         <div class="container categories">
           <button class="category-item active" data-category="All"><span class="category-icon">✦</span>All</button>
           <button class="category-item" data-category="Grocery"><span class="category-icon">🥕</span>Grocery</button>
@@ -66,10 +66,11 @@
           <button class="category-item" data-category="Toys"><span class="category-icon">🧸</span>Toys & More</button>
           <button class="category-item" data-category="Travel"><span class="category-icon">✈️</span>Travel</button>
         </div>
+        <div class="mega-menu"><strong>Shop by category</strong><span>Men</span><span>Women</span><span>Kids</span><span>Home essentials</span></div>
       </section>
       <section class="offer-strip"><div class="container offer-items"><span>🔥 Big Savings Week</span><span>Free delivery on ₹499+</span><span>7-day easy returns</span><span>Secure payments</span><button id="sell-btn" type="button">Sell on Atul Cart</button></div></section>
 
-      <section class="hero-section container">
+      <section class="hero-section container" aria-label="Featured Offers">
         <div class="hero-content">
           <div class="hero-copy">
             <p class="eyebrow">The Atul Cart big sale</p>
@@ -101,9 +102,9 @@
         <div class="feature"><span class="feature-icon yellow">☎</span><div><strong>Need help?</strong><small>We're here 24/7</small></div></div>
       </section>
 
-      <section class="container deals-section" id="products">
+      <section class="container deals-section" id="products" aria-labelledby="catalog-title">
         <div class="section-heading">
-          <div><p class="eyebrow">Handpicked for you</p><h2>Top deals today</h2></div>
+          <div><p class="eyebrow">Handpicked for you</p><h2 id="catalog-title">Top deals today</h2></div>
           <div class="catalog-tools"><select id="sort-select" aria-label="Sort products"><option value="popular">Popular</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="rating">Top rated</option></select><button class="view-all" id="view-all">View all <span>→</span></button></div>
         </div>
         <div class="filter-chips"><button class="filter-chip active" data-price="all">All prices</button><button class="filter-chip" data-price="under500">Under ₹500</button><button class="filter-chip" data-price="500to1000">₹500 - ₹1,000</button><button class="filter-chip" data-price="over1000">Above ₹1,000</button></div>
@@ -111,10 +112,10 @@
         <div class="empty-state" id="empty-state" hidden>No products found. Try another search.</div>
       </section>
 
-      <section class="container promo-grid">
-        <div class="promo-card promo-yellow"><div><p>Fresh picks daily</p><h3>Groceries<br />at great prices</h3><button data-category="Grocery">Shop groceries →</button></div><span class="promo-emoji">🥬</span></div>
-        <div class="promo-card promo-blue"><div><p>Upgrade your tech</p><h3>Power up<br />your lifestyle</h3><button data-category="Electronics">Explore tech →</button></div><span class="promo-emoji">🎧</span></div>
-        <div class="promo-card promo-pink"><div><p>Style that speaks</p><h3>Looks you'll<br />love</h3><button data-category="Fashion">Shop fashion →</button></div><span class="promo-emoji">👗</span></div>
+      <section class="container promo-grid masonry-layout" aria-label="Featured categories">
+        <div class="promo-card promo-yellow"><div><p>Fresh picks daily</p><h3>Groceries<br />at great prices</h3><button data-category="Grocery">Shop groceries →</button><div class="promo-products" data-promo-grid="Grocery"></div></div><span class="promo-emoji">🥬</span></div>
+        <div class="promo-card promo-blue"><div><p>Upgrade your tech</p><h3>Power up<br />your lifestyle</h3><button data-category="Electronics">Explore tech →</button><div class="promo-products" data-promo-grid="Electronics"></div></div><span class="promo-emoji">🎧</span></div>
+        <div class="promo-card promo-pink"><div><p>Style that speaks</p><h3>Looks you'll<br />love</h3><button data-category="Fashion">Shop fashion →</button><div class="promo-products" data-promo-grid="Fashion"></div></div><span class="promo-emoji">👗</span></div>
       </section>
     </main>
 
@@ -122,7 +123,7 @@
       <div class="container footer-grid">
         <div><a class="brand footer-brand" href="#"><span class="brand-mark">A</span><span><strong>atul</strong><em>cart</em><small>shop smart, live better</small></span></a><p>Atul Cart<br />Making everyday shopping a little more delightful.</p><p class="footer-address">📍 Koliyahar, Mahawapur,<br />Hihipurwa, Bahraich</p></div>
         <div><h4>Company</h4><a href="#about">About Atul Cart</a><a href="#careers">Careers</a><a href="#stories">Our stories</a><a href="#sell">Sell on Atul Cart</a></div>
-        <div><h4>Customer care</h4><a href="tel:+918795484365">☎ 8795484365</a><a href="mailto:singhatulkumar8795@gmail.com">✉ singhatulkumar8795@gmail.com</a><a href="https://wa.me/918795484365" target="_blank" rel="noreferrer">WhatsApp support</a><a href="#returns">Returns & refunds</a><a href="#terms">Terms & conditions</a><button class="admin-link" id="admin-btn" type="button">Admin dashboard</button></div>
+        <div><h4>Customer care</h4><a href="tel:+918795484365">☎ 8795484365</a><a href="mailto:singhatulkumar8795@gmail.com">✉ singhatulkumar8795@gmail.com</a><a href="https://wa.me/918795484365" target="_blank" rel="noreferrer">WhatsApp support</a><a href="#returns">Returns & refunds</a><a href="#terms">Terms & conditions</a><button class="admin-link" id="admin-btn" type="button" hidden>Admin dashboard</button></div>
         <div><h4>Download our app</h4><div class="app-buttons"><button>▶ <span>Get it on<strong>Google Play</strong></span></button><button> <span>Download on the<strong>App Store</strong></span></button></div></div>
       </div>
       <div class="container footer-bottom"><span>© 2024 Atul Cart. Made with care in India.</span><span>Follow us&nbsp; &nbsp;● ◉ ◎</span></div>
@@ -146,31 +147,33 @@
     <div class="modal-shell" id="checkout-modal" aria-hidden="true">
       <section class="modal-card checkout-card">
         <button class="modal-close" data-close-modal="checkout-modal">×</button>
-        <p class="eyebrow">Secure checkout</p><h2>Where should we deliver?</h2>
-        <form id="checkout-form" class="checkout-form">
-          <div class="form-row"><label>Full name<input name="name" required placeholder="Atul Kumar" /></label><label>Phone number<input name="phone" required pattern="[0-9]{10}" placeholder="10 digit number" /></label></div>
-          <label>Address<input name="address" required placeholder="House no, street, area" /></label>
-          <div class="form-row"><label>City<input name="city" required placeholder="Your city" /></label><label>PIN code<input name="pin" required pattern="[0-9]{6}" placeholder="6 digit PIN" /></label></div>
+        <p class="eyebrow">Secure checkout</p><h2>Where should we deliver?</h2><div class="checkout-progress"><span class="done">1. Login</span><span class="active">2. Address</span><span>3. Confirm COD</span></div>
+        <form id="checkout-form" class="checkout-form" autocomplete="on">
+          <div class="form-row"><label>Full name<input name="name" autocomplete="name" required placeholder="Atul Kumar" /></label><label>Phone number<input name="phone" autocomplete="tel" required pattern="[0-9]{10}" placeholder="10 digit number" /></label></div>
+          <label>Address<input name="address" autocomplete="shipping street-address" required placeholder="House no, street, area" /></label>
+          <div class="form-row"><label>City<input name="city" autocomplete="shipping address-level2" required placeholder="Your city" /></label><label>PIN code<input name="pin" autocomplete="shipping postal-code" type="text" required pattern="[0-9]{6}" inputmode="numeric" placeholder="6 digit PIN" /></label></div>
           <fieldset><legend>Payment method</legend><label class="radio-option"><input type="radio" name="payment" value="cod" checked /> Cash on delivery</label></fieldset>
           <div class="checkout-summary"><span>Total payable</span><strong id="checkout-total">₹0</strong></div>
-          <button class="primary-btn full-btn" type="submit">Place order <span>→</span></button>
+          <button class="primary-btn full-btn" type="submit">Place order <span>→</span></button><div class="trust-badges"><span>🚚 Free Shipping</span><span>🤝 Verified COD</span><span>🔒 Secure Data</span></div>
         </form>
       </section>
     </div>
     <div class="modal-shell" id="orders-modal" aria-hidden="true"><section class="modal-card orders-card"><button class="modal-close" data-close-modal="orders-modal">×</button><p class="eyebrow">Your account</p><h2>Your orders</h2><button class="secondary-btn" id="open-tracking">Track an order</button><div id="orders-list"></div></section></div>
-    <div class="modal-shell" id="admin-modal" aria-hidden="true"><section class="modal-card admin-card"><button class="modal-close" data-close-modal="admin-modal">×</button><p class="eyebrow">Atul Cart control room</p><h2>Admin dashboard</h2><div class="admin-stats" id="admin-stats"></div><div class="admin-table" id="admin-table"></div></section></div>
-    <div class="modal-shell" id="profile-modal" aria-hidden="true"><section class="modal-card profile-card"><button class="modal-close" data-close-modal="profile-modal">×</button><p class="eyebrow">My Atul Cart</p><h2 id="profile-title">Your profile</h2><form id="profile-form"><div class="form-row"><label>Name<input name="name" required /></label><label>Phone<input name="phone" required pattern="[0-9]{10}" /></label></div><label>Saved address<input name="address" required placeholder="House no, street, area" /></label><div class="form-row"><label>Landmark<input name="landmark" /></label><label>PIN code<input name="pin" required pattern="[0-9]{6}" /></label></div><button class="primary-btn full-btn" type="submit">Save profile <span>→</span></button></form><div class="wallet-card"><span>Atul Wallet</span><strong id="wallet-balance">₹0</strong><small>Cashback and refunds</small></div><button class="secondary-btn full-btn" id="profile-orders">View order history</button></section></div>
+    <div class="modal-shell" id="admin-modal" aria-hidden="true"><section class="modal-card admin-card"><button class="modal-close" data-close-modal="admin-modal">×</button><p class="eyebrow">Atul Cart control room</p><h2>Admin dashboard</h2><div class="admin-stats" id="admin-stats"></div><button class="secondary-btn" id="export-orders" type="button">Download orders CSV</button><form id="product-form" class="admin-product-form"><h3>Add product</h3><div class="form-row"><label>Name<input name="name" required maxlength="80" /></label><label>Category<input name="category" required maxlength="30" /></label></div><div class="form-row"><label>Price<input name="price" type="number" min="1" required /></label><label>Old price<input name="old" type="number" min="1" required /></label></div><div class="form-row"><label>Stock<input name="stock" type="number" min="0" required /></label><label>Emoji<input name="emoji" required maxlength="2" placeholder="📦" /></label></div><button class="primary-btn" type="submit">Add product <span>→</span></button></form><div class="admin-table" id="admin-table"></div></section></div>
+    <div class="modal-shell" id="profile-modal" aria-hidden="true"><section class="modal-card profile-card"><button class="modal-close" data-close-modal="profile-modal">×</button><p class="eyebrow">My Atul Cart</p><h2 id="profile-title">Your profile</h2><form id="profile-form"><div class="form-row"><label>Name<input name="name" required /></label><label>Phone<input name="phone" required pattern="[0-9]{10}" /></label></div><label>Saved address<input name="address" required placeholder="House no, street, area" /></label><div class="form-row"><label>Landmark<input name="landmark" /></label><label>PIN code<input name="pin" required pattern="[0-9]{6}" /></label></div><button class="primary-btn full-btn" type="submit">Save profile <span>→</span></button></form><div class="wallet-card"><span>Atul Wallet</span><strong id="wallet-balance">₹0</strong><small>Cashback and refunds</small></div><button class="secondary-btn full-btn" id="profile-orders">View order history</button><button class="text-btn full-btn" id="logout-btn" type="button">Log out securely</button></section></div>
     <div class="modal-shell" id="location-modal" aria-hidden="true"><section class="modal-card location-card"><button class="modal-close" data-close-modal="location-modal">×</button><p class="eyebrow">Delivery location</p><h2>Where should we deliver?</h2><p class="modal-subtitle">Enter your PIN code to see local delivery options.</p><form id="location-form"><label>PIN code<input name="pin" required pattern="[0-9]{6}" placeholder="e.g. 110001" /></label><button class="primary-btn full-btn" type="submit">Set location <span>→</span></button></form></section></div>
     <div class="modal-shell" id="tracking-modal" aria-hidden="true"><section class="modal-card tracking-card"><button class="modal-close" data-close-modal="tracking-modal">×</button><p class="eyebrow">Order tracking</p><h2>Track your order</h2><form id="tracking-form"><label>Order ID<input name="order" required placeholder="e.g. AC123456" /></label><button class="primary-btn full-btn" type="submit">Track order <span>→</span></button></form><div id="tracking-result"></div></section></div>
+    <div class="modal-shell" id="policy-modal" aria-hidden="true"><section class="modal-card policy-card"><button class="modal-close" data-close-modal="policy-modal">×</button><p class="eyebrow">Atul Cart policies</p><h2 id="policy-title"></h2><div id="policy-content"></div></section></div>
     <div class="chat-widget" id="chat-widget"><button id="chat-toggle" aria-label="Open Atul Cart help">💬</button><div class="chat-box" id="chat-box"><strong>Atul Cart assistant</strong><p id="chat-message">Hi! Ask me about delivery, returns or your order.</p><div class="chat-actions"><button data-chat="delivery">Delivery</button><button data-chat="returns">Returns</button><button data-chat="order">Track order</button></div></div></div>
-    <a class="whatsapp-float" href="https://wa.me/918795484365?text=Hello%20Atul%20Cart" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">✆</a>
-    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">☾</button>
+    <a class="whatsapp-float" href="https://wa.me/918795484365?text=Hello%20Atul%20Cart" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">✆<span>Need help? Chat with Atul</span></a>
     <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart">
       <div class="drawer-header"><h2>Your cart <span id="drawer-count">0</span></h2><button id="close-cart" aria-label="Close cart">×</button></div>
       <div class="cart-items" id="cart-items"></div>
       <div class="cart-footer"><div><span>Subtotal</span><strong id="cart-total">₹0</strong></div><button class="primary-btn checkout-btn" id="checkout-btn">Proceed to checkout <span>→</span></button></div>
     </aside>
     <div class="overlay" id="overlay"></div>
+    <div class="live-sales-ticker" id="live-sales-ticker" role="status">✨ Popular picks are selling fast</div>
+    <div class="sticky-mobile-cta"><button class="primary-btn" data-mobile-shop>Shop products</button><button class="secondary-btn" data-mobile-cart>View cart</button></div>
     <script src="script.js"></script>
     <script type="application/ld+json">
       {
